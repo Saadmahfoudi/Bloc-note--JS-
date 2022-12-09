@@ -3,13 +3,46 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
+    font-size: large;
+    font-weight: bolder;
 }
 body{
     min-height: 100vh;
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div#notes{
+    height: 40vh;
+    width: 40vw;
+    background-color: rgba(0, 0, 0, 0.059);
+    overflow-y: auto;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+}
+div.note-item > p{
+    text-align: center;
+}
+div.note-item {
+    width: 80%;
+    background-color: white;
+    padding: .6rem .8rem;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    border-radius: .6rem;
+    margin: .3rem auto;
+    transition: box-shadow .2s ease-in-out;
+    cursor: pointer;
+}
+div.note-item:hover {
+    box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.1);
 }
 section{
     display: flex;
@@ -22,7 +55,8 @@ section{
 h1{
     margin: 30px;
 }
-textarea{
+textarea, input{
+    margin-block: .4rem;
     resize: none;
     padding: 10px;
     font-size: 18px;
@@ -42,4 +76,22 @@ button:hover{
     background-color: aquamarine;
     border: 1px solid;
     
+}
+button.delete-btn {
+    padding: .3rem .5rem;
+    background-color: crimson;
+    color: white;
+    transition: box-shadow .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+button.delete-btn:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 1rem .1rem rgba(161, 17, 17, 0.344);
+}
+
+@media screen and (max-width:750px) {
+    body{
+        flex-direction: column;
+    }
+
 }
