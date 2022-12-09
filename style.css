@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+h1{
+    margin: 30px;
+}
+textarea{
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+button{
+    margin: 20px 0;
+    border: 1px solid transparent;
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: aquamarine;
+    border: 1px solid;
+    
+}
